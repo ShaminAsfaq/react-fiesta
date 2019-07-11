@@ -13,3 +13,7 @@ This repository is dedicated for the projects that I am about to develop with Re
 ***********************
 
 <b>"YouTube API"</b> is a complete implementation of how to work with APIs in React. Specifically, for this project I worked on YouTube APIs and used them to search and show videos on an embedded YT player.
+
+***********************
+
+<b>"blog"</b> is a simple implementation of redux-thunk to make async api calls.
