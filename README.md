@@ -16,4 +16,4 @@ This repository is dedicated for the projects that I am about to develop with Re
 
 ***********************
 
-<b>"blog"</b> is a simple implementation of redux-thunk to make async api calls.
+<b>"Blog"</b> is a simple implementation of redux-thunk to make async api calls.
