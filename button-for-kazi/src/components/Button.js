@@ -2,14 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const toggle = (buttonText, icon) => {
-    if(buttonText===null) {
-        buttonText: 'Click to Sign In';
-        icon: 'play icon';
-    } else {
-        buttonText: 'Signed In! Click again to Sign Out.';
-        icon: 'pause icon';
-    }
-    return;
+    console.log(buttonText, icon)
+    // if(buttonText===null) {
+    //     buttonText: 'Click to Sign In';
+    //     icon: 'play icon';
+    // } else {
+    //     buttonText: 'Signed In! Click again to Sign Out.';
+    //     icon: 'pause icon';
+    // }
+    // return;
 }
 
 const Button = ({ buttonText=null, icon }) => {
