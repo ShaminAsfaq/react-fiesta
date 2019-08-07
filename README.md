@@ -17,3 +17,7 @@ This repository is dedicated for the projects that I am about to develop with Re
 ***********************
 
 <b>"Blog"</b> is a simple implementation of redux-thunk to make async api calls.
+
+***********************
+
+<b>"button-for-kazi"</b> is an implementation of redux to keep log of Sign In and Out of Kazi da's office hours. <i>PROBABLY</i> I will convert it into a redux-thunk project. Time will tell.
