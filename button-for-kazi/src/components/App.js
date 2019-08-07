@@ -4,16 +4,16 @@ import Clock from './Clock';
 import RecordTime from './RecordedTime';
 
 class App extends React.Component {
-    state = {
-        buttonText: '',
-        icon: '',
-        signedIn: '',
-        signedOut: '',
-    }
+    // state = {
+    //     buttonText: '',
+    //     icon: '',
+    //     signedIn: '',
+    //     signedOut: '',
+    // }
 
-    updateState = (state) => {
-        this.setState(state)
-    }
+    // updateState = (state) => {
+    //     this.setState(state)
+    // }
 
     timeStyleLeft = {
         paddingLeft: "30px",
@@ -25,15 +25,14 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <div className="ui secondary pointing menu">
-                    <Button buttonState={[{state: this.state}, this.updateState]}/>
+                    <Button />
                 </div>
                 <div className="ui statistics">
                     <div className="statistic" style={this.timeStyleLeft}>
-                        <RecordTime signedIn={this.state.signedIn}/>
+                        <RecordTime />
                     </div>
                     <div className="statistic">
                         <Clock/>

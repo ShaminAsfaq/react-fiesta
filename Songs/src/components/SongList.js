@@ -20,7 +20,6 @@ class SongList extends Component {
 					<div className="content">
 						{ song.title }
 					</div>
-
 				</div>
 			);
 		});

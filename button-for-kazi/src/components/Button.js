@@ -1,53 +1,58 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class Button extends React.Component {
-    state = this.props.buttonState[0].state;
-
-    componentDidMount() {
-        this.setState({
-            buttonText: 'Click to Sign In!',
-            icon: 'play icon'
-        });
-        const func = this.props.buttonState[1]
+const toggle = (buttonText, icon) => {
+    if(buttonText===null) {
+        buttonText: 'Click to Sign In';
+        icon: 'play icon';
+    } else {
+        buttonText: 'Signed In! Click again to Sign Out.';
+        icon: 'pause icon';
     }
+    return;
+}
 
-    changeStatus = () => {
-        const time = new Date();
-        const timeStamp = time.getHours()+':'+time.getMinutes()+':'+time.getSeconds()        
-        
-        console.log(timeStamp)
-
-        const stateObj = this.state;
-        if(stateObj.icon==="play icon") {
-            console.log('EINE ASI')
-            this.setState({
-                buttonText: 'Signed In! Click again to Sign Out.',
-                icon: 'pause icon',
-                signedIn: `${timeStamp}`
-            });
-        }else {
-            console.log('jani na kisui ami -------------')
-            this.setState({
-                buttonText: 'Click to Sign In!',
-                icon: 'play icon',
-                signedOut: `${timeStamp}`
-            });
-        }
-    }
-
-    render() {
-        const response = this.state.buttonText;
-        const icon = this.state.icon;
-
+const Button = ({ buttonText=null, icon }) => {
+    if(!buttonText) {
         return (
             <div className="ui vertical labeled icon buttons">
-                <button onClick={this.changeStatus} className="ui basic button">
-                    <i className={icon}></i>
-                    {response}
+                <button 
+                    className="ui basic button"
+                    onClick={() => { toggle(buttonText, icon) }}
+                >
+                    <i className={ icon }></i>
+                    { buttonText }
+                    {/* Click to Sign In */}
                 </button>
             </div>
         );
     }
+    return (
+        <div className="ui vertical labeled icon buttons">
+            <button 
+                className="ui basic button"
+                onClick={() => { toggle(buttonText, icon) }}
+            >
+                <i className={ icon }></i>
+                { buttonText }
+                {/* Signed In! Click again to Sign Out. */}
+            </button>
+        </div>
+    );
+};
+
+const mapStateToProps = (state) => {
+    return {
+        buttonText: state.buttonText,
+        icon: state.icon
+        // pressingTime: state.pressingTime
+    };
 }
 
-export default Button;
+export default connect(mapStateToProps, {
+    toggle: toggle
+})(Button);
+
+
+
+
