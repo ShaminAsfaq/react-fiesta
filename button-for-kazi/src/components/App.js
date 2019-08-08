@@ -4,16 +4,6 @@ import Clock from './Clock';
 import RecordTime from './RecordedTime';
 
 class App extends React.Component {
-    // state = {
-    //     buttonText: '',
-    //     icon: '',
-    //     signedIn: '',
-    //     signedOut: '',
-    // }
-
-    // updateState = (state) => {
-    //     this.setState(state)
-    // }
 
     timeStyleLeft = {
         paddingLeft: "30px",

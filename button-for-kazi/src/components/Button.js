@@ -1,57 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getTime } from '../actions';
 
-const toggle = (buttonText, icon) => {
-    console.log(buttonText, icon)
-    // if(buttonText===null) {
-    //     buttonText: 'Click to Sign In';
-    //     icon: 'play icon';
-    // } else {
-    //     buttonText: 'Signed In! Click again to Sign Out.';
-    //     icon: 'pause icon';
-    // }
-    // return;
-}
 
-const Button = ({ buttonText=null, icon }) => {
-    if(!buttonText) {
+class Button extends React.Component {
+    renderButton() {
+        console.log(this.props)
         return (
             <div className="ui vertical labeled icon buttons">
                 <button 
                     className="ui basic button"
-                    onClick={() => { toggle(buttonText, icon) }}
+                    onClick={() => { this.props.getTime({buttonText: this.props.buttonText, icon: this.props.icon, time: new Date()}) }}
                 >
-                    <i className={ icon }></i>
-                    { buttonText }
-                    {/* Click to Sign In */}
+                    <i className={ this.props.icon }></i>
+                    {/* { this.props.buttonText } */}
+                    Click to Sign In
                 </button>
             </div>
         );
     }
-    return (
-        <div className="ui vertical labeled icon buttons">
-            <button 
-                className="ui basic button"
-                onClick={() => { toggle(buttonText, icon) }}
-            >
-                <i className={ icon }></i>
-                { buttonText }
-                {/* Signed In! Click again to Sign Out. */}
-            </button>
-        </div>
-    );
+
+
+    render() {
+        console.log(this.props)
+        return <div>{this.renderButton()}</div>
+    }
 };
 
 const mapStateToProps = (state) => {
     return {
         buttonText: state.buttonText,
         icon: state.icon
-        // pressingTime: state.pressingTime
     };
 }
 
 export default connect(mapStateToProps, {
-    toggle: toggle
+    getTime: getTime
 })(Button);
 
 

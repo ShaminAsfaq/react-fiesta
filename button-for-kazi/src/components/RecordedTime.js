@@ -1,36 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-// class RecordTime extends React.Component {
-//     state = this.props.signedIn
-    
-//     componentDidMount() {
-//     }
-
-
-//     render() {
-//         console.log(this.state)
-//         return (
-//             <div className="ui statistic">
-//                 <div className="value">
-//                     08:53 AM
-//                 </div>
-//                 <div className="label">
-//                     Signed In!
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
-// export default RecordTime;
-
-const RecordTime = ({ pressingTime }) => {
-    if(!pressingTime) {
+const RecordTime = ({ loggedTime }) => {
+    if(!loggedTime) {
         return (
             <div className="ui statistic">
                 <div className="value">
-                    08:53 AM
+                    { loggedTime }
                 </div>
                 <div className="label">
                     Signed In!
@@ -41,7 +17,7 @@ const RecordTime = ({ pressingTime }) => {
         return (
             <div className="ui statistic">
                 <div className="value">
-                    { pressingTime }
+                    { loggedTime }
                 </div>
                 <div className="label">
                     Signed Out!
@@ -53,7 +29,7 @@ const RecordTime = ({ pressingTime }) => {
 
 const mapStateToProps = (state) => {
     return {
-        pressingTime: state.pressingTime
+        loggedTime: state.loggedTime
     };
 }
 
