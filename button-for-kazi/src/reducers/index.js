@@ -23,5 +23,3 @@ export default combineReducers({
     signedIn: signedInReducer,
     signedOut: signedOutReducer
 });
-
-
