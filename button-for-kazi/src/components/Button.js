@@ -1,41 +1,66 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getTime } from '../actions';
+import { updateTime } from '../actions';
 
 
 class Button extends React.Component {
     renderButton() {
-        console.log(this.props)
-        return (
-            <div className="ui vertical labeled icon buttons">
-                <button 
-                    className="ui basic button"
-                    onClick={() => { this.props.getTime({buttonText: this.props.buttonText, icon: this.props.icon, time: new Date()}) }}
-                >
-                    <i className={ this.props.icon }></i>
-                    {/* { this.props.buttonText } */}
-                    Click to Sign In
-                </button>
-            </div>
-        );
+        if(this.props.timeLoggedReducer.signedIn) {
+            var obj = this.props.timeLoggedReducer;
+            var newObj = {
+                signedIn: false
+            }
+
+
+            return (
+                <div className="ui vertical labeled icon buttons">
+                    <button 
+                        className="ui basic button"
+                        onClick={() => { this.props.updateTime({ ...obj, ...newObj }) }}
+                    >
+                        <i className='pause icon'></i>
+                            Signed In successfully!
+                    </button>
+                </div>
+            );
+        } else {
+            var obj = this.props.timeLoggedReducer;
+            var newObj = {
+                signedIn: true
+            }
+
+            return (
+                <div className="ui vertical labeled icon buttons">
+                    <button 
+                        className="ui basic button"
+                        onClick={() => { this.props.updateTime({ ...obj, ...newObj }) }}
+                    >
+                        <i className='play icon'></i>
+                            Click to Sign In!
+                    </button>
+                </div>
+            );
+        }
+    }
+
+    componentDidMount() {
+        this.props.updateTime({ signedIn: false })
     }
 
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return <div>{this.renderButton()}</div>
     }
 };
 
 const mapStateToProps = (state) => {
-    return {
-        buttonText: state.buttonText,
-        icon: state.icon
-    };
+    // console.log(state)
+    return state;
 }
 
 export default connect(mapStateToProps, {
-    getTime: getTime
+    updateTime: updateTime
 })(Button);
 
 

@@ -1,14 +1,15 @@
-export const getTime = (payload) => {
-    console.log(payload)
+export const updateTime = (payload) => {
+	console.log(payload)
 
-    if (payload) {
-        payload.buttonText = 'Click to Sign In'
-        payload.icon = 'play icon'
-    }
+	if(payload.signedIn) {
+		payload['signedInLogged'] = new Date()
+	} else {
+			payload['signedOutLogged'] = new Date()
+	}
 
-    return {
-        type: 'TIME_LOGGED',
-        payload: payload
-    }
+	return {
+		type: 'TIME_LOGGED',
+		payload: payload
+	}
 }
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from './Button';
 import Clock from './Clock';
-import RecordTime from './RecordedTime';
+import LoggedIn from './LoggedIn';
+import LoggedOut from './LoggedOut';
 
 class App extends React.Component {
 
@@ -22,13 +23,10 @@ class App extends React.Component {
                 </div>
                 <div className="ui statistics">
                     <div className="statistic" style={this.timeStyleLeft}>
-                        <RecordTime />
+                        <LoggedIn/>
                     </div>
-                    <div className="statistic">
-                        <Clock/>
-                    </div>
-                    <div className="statistic" style={this.timeStyleRight}>
-                        <RecordTime/>
+                    <div className="statistic" style={this.timeStyleLeft}>
+                        <LoggedOut/>
                     </div>
                 </div>
             </div>
