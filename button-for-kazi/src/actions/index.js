@@ -1,5 +1,5 @@
 export const updateTime = (payload) => {
-	console.log(payload)
+	// console.log(payload)
 
 	if(payload.signedIn) {
 		payload['signedInLogged'] = new Date()

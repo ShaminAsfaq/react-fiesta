@@ -5,6 +5,7 @@ import { updateTime } from '../actions';
 
 class Button extends React.Component {
     renderButton() {
+        
         if(this.props.timeLoggedReducer.signedIn) {
             var obj = this.props.timeLoggedReducer;
             var newObj = {
@@ -24,8 +25,8 @@ class Button extends React.Component {
                 </div>
             );
         } else {
-            var obj = this.props.timeLoggedReducer;
-            var newObj = {
+            obj = this.props.timeLoggedReducer;
+            newObj = {
                 signedIn: true
             }
 

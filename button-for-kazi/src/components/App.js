@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from './Button';
-import Clock from './Clock';
 import LoggedIn from './LoggedIn';
 import LoggedOut from './LoggedOut';
+import Duration from './Duration';
 
 class App extends React.Component {
 
@@ -12,7 +12,12 @@ class App extends React.Component {
     };
 
     timeStyleRight = {
-        paddingTop: "30px"
+        paddingTop: "40px"
+    }
+
+    durationStyleMiddle = {
+        paddingTop: "30px",
+        paddingLeft: "30px",
     }
 
     render() {
@@ -22,10 +27,15 @@ class App extends React.Component {
                     <Button />
                 </div>
                 <div className="ui statistics">
-                    <div className="statistic" style={this.timeStyleLeft}>
+                    <div style={this.timeStyleLeft}>
                         <LoggedIn/>
                     </div>
-                    <div className="statistic" style={this.timeStyleLeft}>
+                    <div className="ui statistics">
+                        <div className="statistic" style={this.durationStyleMiddle}>
+                            <Duration/>
+                        </div>
+                    </div>
+                    <div style={this.timeStyleLeft}>
                         <LoggedOut/>
                     </div>
                 </div>
