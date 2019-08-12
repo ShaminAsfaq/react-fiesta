@@ -18,6 +18,7 @@ class App extends React.Component {
     durationStyleMiddle = {
         paddingTop: "30px",
         paddingLeft: "30px",
+        textAlign: "center"
     }
 
     render() {

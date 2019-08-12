@@ -10,12 +10,22 @@ class Duration extends React.Component {
 		var hour = '00'
 		var minute = '00'
 		var second = '00'
+		var currentTime
+		var difference
+		var durationFontColor = 'darkgrey'
 
 
 		var myFunc = () => {
 
-			var currentTime = new Date().getTime();
-			var difference = currentTime - signedIn;
+			if(this.props.signedIn===false) {
+				console.log('STOP !!')
+				// console.log(hour+':'+minute+':'+second)
+				clearInterval(func)
+				durationFontColor = 'red'
+			}
+
+			currentTime = new Date().getTime();
+			difference = currentTime - signedIn;
 
 			hour = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			minute = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -32,21 +42,22 @@ class Duration extends React.Component {
 			}
 
 			console.log(hour+':'+minute+':'+second)
-			if(this.props.signedIn===false) {
-				console.log('STOP !!')
-				clearInterval(func)
-			}
 		}
 
 		if(this.props.signedIn===true) {
+			console.log('STARTED !!')
 			func = setInterval(myFunc, 1000);
 		}
 
+		myFunc()
+
 		return (
-			<div className="ui statistics">
-				<div className="value">
-					{ hour + ':' + minute + ':' + second }
-				</div>
+			<div style={{ color: durationFontColor }}>
+				{ (hour || '00') + ':' + (minute || '00') + ':' + (second || '00') }
+				<br/>
+				<label style={{ color: 'darkgrey', fontSize: '11px' }}>
+					Error: Up to 1 second
+				</label>
 			</div>
 		);
 	}
