@@ -4,7 +4,7 @@ export const updateTime = (payload) => {
 	if(payload.signedIn) {
 		payload['signedInLogged'] = new Date()
 	} else {
-			payload['signedOutLogged'] = new Date()
+		payload['signedOutLogged'] = new Date()
 	}
 
 	return {
@@ -13,3 +13,12 @@ export const updateTime = (payload) => {
 	}
 }
 
+//	TEST EXPORT
+export const renderSecond = (payload) => {
+	console.log(payload)
+	// return {
+	// 	type: 'LOG_STARTED',
+	// 	payload: payload
+	// }
+	return updateTime(payload)
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateTime } from '../actions';
+import { updateTime, renderSecond } from '../actions';
 
 
 class Button extends React.Component {
@@ -17,7 +17,9 @@ class Button extends React.Component {
                 <div className="ui vertical labeled icon buttons">
                     <button 
                         className="ui basic button"
-                        onClick={() => { this.props.updateTime({ ...obj, ...newObj }) }}
+                        onClick={() => { 
+                            this.props.updateTime({ ...obj, ...newObj })
+                        }}
                     >
                         <i className='pause icon'></i>
                             Signed In successfully!
@@ -34,7 +36,9 @@ class Button extends React.Component {
                 <div className="ui vertical labeled icon buttons">
                     <button 
                         className="ui basic button"
-                        onClick={() => { this.props.updateTime({ ...obj, ...newObj }) }}
+                        onClick={() => { 
+                            this.props.updateTime({ ...obj, ...newObj })
+                        }}
                     >
                         <i className='play icon'></i>
                             Click to Sign In!
@@ -56,12 +60,13 @@ class Button extends React.Component {
 };
 
 const mapStateToProps = (state) => {
-    // console.log(state)
+    console.log(state)
     return state;
 }
 
 export default connect(mapStateToProps, {
-    updateTime: updateTime
+    updateTime: updateTime,
+    renderSecond: renderSecond
 })(Button);
 
 
