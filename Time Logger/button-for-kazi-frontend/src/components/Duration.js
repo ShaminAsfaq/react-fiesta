@@ -74,6 +74,11 @@ class Duration extends React.Component {
 	}
 	
 	componentDidMount() {
+		this.setState({
+			hour: 0,
+			minute: 0,
+			second: 0
+		})
 		// console.log(this.props)
 		this.timerID = setInterval(() => {
 			if(this.props.signedIn){
@@ -85,7 +90,7 @@ class Duration extends React.Component {
 
 				var hour = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 				var minute = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-				var second = Math.floor((difference % (1000 * 60)) / 1000);
+				var second = Math.floor((difference % (1000 * 60)) / 1000) + 1;
 
 				this.setState({
 					hour, minute, second
@@ -99,7 +104,7 @@ class Duration extends React.Component {
 		// 	this.renderDuration()
 		// );
 	
-		console.log(this.props)
+		// console.log(this.props)
 		//TEST RETURN
 		return (
 			<div>
@@ -110,7 +115,7 @@ class Duration extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state);
+	// console.log(state);
 	return state.timeLoggedReducer;
 }
 
