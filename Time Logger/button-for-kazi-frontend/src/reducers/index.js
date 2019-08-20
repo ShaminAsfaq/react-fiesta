@@ -1,11 +1,22 @@
 import { combineReducers } from 'redux';
 
 const timeLoggedReducer = (isSignedIn=null, action) => {
-	// console.log(action)
-    if(action.type==='TIME_LOGGED'){
+    switch(action.type) {
+        case('SIGNED_IN'):
+            console.log(action)
+            action.payload['signedInLogged'] = action.payload.time
             return action.payload;
+        case('SIGNED_OUT'):
+            if(!action.payload){
+                action['payload'] = {}
+                return action.payload
+            } else {
+                action.payload['signedOutLogged'] = action.payload.time
+                return action.payload;
+            }
+        default:
+            return {}
     }
-    else return action
 };
 
 export default combineReducers({

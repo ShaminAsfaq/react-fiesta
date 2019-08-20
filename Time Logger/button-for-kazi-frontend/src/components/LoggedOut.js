@@ -29,8 +29,9 @@ class LoggedOut extends React.Component {
                 }
 
                 status = 'Signed Out!' 
+                console.log(hour,minute,second)
 
-                if((this.props.signedInLogged===undefined && signedOutTime!==undefined) || signedOutTime < this.props.signedInLogged) {
+                if(signedOutTime < this.props.signedInLogged) {
                     hour = '00'
                     minute = '00'
                     second = '00'
