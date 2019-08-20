@@ -8,7 +8,6 @@ public class ButtonForKaziApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ButtonForKaziApplication.class, args);
-        System.out.println("Hello, Time-Logger !!");
     }
 
 }

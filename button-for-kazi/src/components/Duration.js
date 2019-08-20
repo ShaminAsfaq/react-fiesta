@@ -67,17 +67,17 @@ class Duration extends React.Component {
 	constructor(props) {
         super(props)
 		this.state = {
-			hour: '00',
-			minute: '00',
-			second: '00'
+			hour: 0,
+			minute: 0,
+			second: 0
 		}
 	}
 	
 	componentDidMount() {
 		this.setState({
-			hour: '00',
-			minute: '00',
-			second: '00'
+			hour: 0,
+			minute: 0,
+			second: 0
 		})
 		// console.log(this.props)
 		this.timerID = setInterval(() => {
@@ -92,23 +92,9 @@ class Duration extends React.Component {
 				var minute = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 				var second = Math.floor((difference % (1000 * 60)) / 1000) + 1;
 
-				if(String(hour).length===1){
-					hour ='0' + hour
-				}
-				
-				if(String(minute).length===1){
-					minute = '0' + minute
-				}
-				
-				if(String(second).length===1){
-					second = '0' + second
-				}
-
 				this.setState({
 					hour, minute, second
 				})
-
-				console.log(this.state)
 			}
 		}, 1000)
 	}
@@ -124,12 +110,13 @@ class Duration extends React.Component {
 		// 	</div>
 		// );
 
+		String(this.state.hour).length===1?console.log('PROBLEM FOUND!'):console.log('NO PROBLEM AT ALL!')
 
 		//TEST RETURN
 		return (
 			<div>
 				{/* { this.state.hour + ':' + this.state.minute + ':' + this.state.second } */}
-				{ this.state.hour + ':' + this.state.minute + ':' + this.state.second }
+				{ String(this.state.hour).length===1?this.state.hour='0'+this.state.hour:this.state.hour + ':' + String(this.state.minute).length===1?this.state.minute='0'+this.state.minute:this.state.minute + ':' + String(this.state.second).length===1?this.state.second='0'+this.state.second:this.state.second }
 			</div>
 		)
 	}
