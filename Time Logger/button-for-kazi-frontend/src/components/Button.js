@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateTime, renderSecond } from '../actions';
+import { signedInAction, signedOutAction } from '../actions';
 
 
 class Button extends React.Component {
@@ -11,7 +11,6 @@ class Button extends React.Component {
             var newObj = {
                 signedIn: false
             }
-
 
             return (
                 <div className="ui vertical labeled icon buttons">
@@ -48,14 +47,56 @@ class Button extends React.Component {
         }
     }
 
+    modifiedRenderButton() {
+        if(!this.props.timeLoggedReducer.signedIn) {
+            var obj = {
+                signedIn: true,
+                time: new Date()
+            }
+
+            return (
+                <div className="ui vertical labeled icon buttons">
+                    <button
+                        className="ui basic button"
+                        onClick={() => {
+                            this.props.signedInAction(obj)
+                        }}
+                    >
+                        <i className='play icon'></i>
+                            Click to sign in!
+                    </button>
+                </div>
+            );
+        } else {
+            obj = {
+                signedIn: false,
+                time: new Date()
+            }
+
+            return (
+                <div className="ui vertical labeled icon buttons">
+                    <button
+                        className="ui basic button"
+                        onClick={() => {
+                            this.props.signedOutAction(obj)
+                        }}
+                    >
+                        <i className='pause icon'></i>
+                            Signed In successfully!
+                    </button>
+                </div>
+            );
+        }
+    }
+
     componentDidMount() {
-        this.props.updateTime({ signedIn: false })
+        this.props.signedOutAction({ signedIn: false })
     }
 
 
     render() {
         // console.log(this.props)
-        return <div>{this.renderButton()}</div>
+        return <div>{this.modifiedRenderButton()}</div>
     }
 };
 
@@ -65,8 +106,8 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {
-    updateTime: updateTime,
-    renderSecond: renderSecond
+    signedInAction,
+    signedOutAction
 })(Button);
 
 

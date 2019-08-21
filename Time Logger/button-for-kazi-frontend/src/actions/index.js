@@ -1,24 +1,30 @@
-export const updateTime = (payload) => {
-	// console.log(payload)
+// export const updateTime = (payload) => {
+// 	// console.log(payload)
 
-	if(payload.signedIn) {
-		payload['signedInLogged'] = new Date()
-	} else {
-		payload['signedOutLogged'] = new Date()
-	}
+// 	if(payload.signedIn) {
+// 		payload['signedInLogged'] = new Date()
+// 	} else {
+// 		payload['signedOutLogged'] = new Date()
+// 	}
 
+// 	return {
+// 		type: 'TIME_LOGGED',
+// 		payload: payload
+// 	}
+// }
+
+export const signedInAction = (payload) => {
+	console.log('SIGNED IN!')
 	return {
-		type: 'TIME_LOGGED',
-		payload: payload
+		type: 'SIGNED_IN',
+		payload
 	}
 }
 
-//	TEST EXPORT
-export const renderSecond = (payload) => {
-	console.log(payload)
-	// return {
-	// 	type: 'LOG_STARTED',
-	// 	payload: payload
-	// }
-	return updateTime(payload)
+export const signedOutAction = (payload) => {
+	console.log('SIGNED OUT!')
+	return {
+		type: 'SIGNED_OUT',
+		payload
+	}
 }
