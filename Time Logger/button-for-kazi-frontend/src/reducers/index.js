@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
 
 const timeLoggedReducer = (isSignedIn=null, action) => {
+    //  GOOD PRACTICE
+    //  -------------
     switch(action.type) {
         case('SIGNED_IN'):
-            console.log(action)
             action.payload['signedInLogged'] = action.payload.time
             return action.payload;
         case('SIGNED_OUT'):

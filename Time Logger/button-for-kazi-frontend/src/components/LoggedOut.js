@@ -29,7 +29,7 @@ class LoggedOut extends React.Component {
                 }
 
                 status = 'Signed Out!' 
-                console.log(hour,minute,second)
+                // console.log(hour,minute,second)
 
                 if(signedOutTime < this.props.signedInLogged) {
                     hour = '00'
