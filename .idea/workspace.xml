@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0f6d014-1ad9-44bc-88a4-8741aafc0645" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indecision-app/src/playground/counter-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/indecision-app/src/playground/counter-example.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +15,7 @@
   </component>
   <component name="ProjectId" id="1SKXS3Jfl7FLHBZ3FWmUwtkA0KD" />
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -45,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571313256517</updated>
-      <workItem from="1571313257600" duration="219000" />
+      <workItem from="1571313257600" duration="461000" />
     </task>
     <task id="LOCAL-00001" summary="Commit from WebStorm">
       <created>1571313329238</created>
@@ -54,7 +54,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571313329238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished 'Lecture 3' of Andrew Mead's Course.">
+      <created>1571313560163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571313560163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finished 'Lecture 3' of Andrew Mead's Course.">
+      <created>1571313653398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571313653398</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +87,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit from WebStorm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit from WebStorm" />
+    <MESSAGE value="Finished 'Lecture 3' of Andrew Mead's Course." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished 'Lecture 3' of Andrew Mead's Course." />
   </component>
 </project>
