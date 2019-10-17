@@ -33,7 +33,5 @@ const renderAgain = () => {
     );
     ReactDOM.render(templateTwo,appRoot);
 }
-
-
 renderAgain();
 
