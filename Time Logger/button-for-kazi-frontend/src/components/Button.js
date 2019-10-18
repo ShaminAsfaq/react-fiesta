@@ -49,16 +49,26 @@ class Button extends React.Component {
 
     modifiedRenderButton() {
         if(!this.props.timeLoggedReducer.signedIn) {
+<<<<<<< HEAD
             var obj = {
                 signedIn: true,
                 time: new Date()
             }
 
+=======
+>>>>>>> 39d56f66782aa896d273ca2572d6c64a8f1537da
             return (
                 <div className="ui vertical labeled icon buttons">
                     <button
                         className="ui basic button"
                         onClick={() => {
+<<<<<<< HEAD
+=======
+                            var obj = {
+                                signedIn: true,
+                                time: new Date()
+                            }
+>>>>>>> 39d56f66782aa896d273ca2572d6c64a8f1537da
                             this.props.signedInAction(obj)
                         }}
                     >
@@ -68,16 +78,26 @@ class Button extends React.Component {
                 </div>
             );
         } else {
+<<<<<<< HEAD
             obj = {
                 signedIn: false,
                 time: new Date()
             }
+=======
+>>>>>>> 39d56f66782aa896d273ca2572d6c64a8f1537da
 
             return (
                 <div className="ui vertical labeled icon buttons">
                     <button
                         className="ui basic button"
                         onClick={() => {
+<<<<<<< HEAD
+=======
+                            var obj = {
+                                signedIn: false,
+                                time: new Date()
+                            }
+>>>>>>> 39d56f66782aa896d273ca2572d6c64a8f1537da
                             this.props.signedOutAction(obj)
                         }}
                     >

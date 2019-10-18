@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Duration extends React.Component {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 39d56f66782aa896d273ca2572d6c64a8f1537da
 	constructor(props) {
         super(props)
 		this.state = {
@@ -9,6 +13,10 @@ class Duration extends React.Component {
 			minute: '00',
 			second: '00'
 		}
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.timerID);
 	}
 	
 	componentWillUnmount() {
@@ -49,24 +57,12 @@ class Duration extends React.Component {
 					hour, minute, second
 				})
 
-				console.log(this.state)
+				// console.log(this.props.signedInLogged)
 			}
 		}, 1000)
 	}
 
 	render() {
-		// return (
-		// 	<div style={{ color: durationFontColor }}>
-		// 		{ (hour || '00') + ':' + (minute || '00') + ':' + (second || '00') }
-		// 		<br/>
-		// 		<label style={{ color: 'darkgrey', fontSize: '11px' }}>
-		// 			Error: Up to 1 second
-		// 		</label>
-		// 	</div>
-		// );
-
-
-		//TEST RETURN
 		return (
 			<div>
 				{ this.state.hour + ':' + this.state.minute + ':' + this.state.second }
