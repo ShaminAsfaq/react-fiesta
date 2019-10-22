@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indecision-app/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="443">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
             </state>
           </provider>
         </entry>
@@ -41,7 +41,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -84,6 +83,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,6 +126,7 @@
       <workItem from="1571313257600" duration="694000" />
       <workItem from="1571381219207" duration="737000" />
       <workItem from="1571508883158" duration="869000" />
+      <workItem from="1571596614028" duration="485000" />
     </task>
     <task id="LOCAL-00001" summary="Commit from WebStorm">
       <created>1571313329238</created>
@@ -169,11 +170,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571508956564</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Many updates in INDECISION APP.">
+      <created>1571596647238</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571596647239</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1606000" />
+    <option name="totallyTimeSpent" value="2091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="718" extended-state="6" />
@@ -238,7 +246,8 @@
     <MESSAGE value="Finished 'Lecture 3' of Andrew Mead's Course." />
     <MESSAGE value="Merge branch 'master' of https://github.com/ShaminAsfaq/react-fiesta&#10;&#10;# Conflicts:&#10;#&#9;Time Logger/button-for-kazi-frontend/src/actions/index.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/Button.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/Duration.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/LoggedOut.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/reducers/index.js" />
     <MESSAGE value="Weekend vibes :3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weekend vibes :3" />
+    <MESSAGE value="Many updates in INDECISION APP." />
+    <option name="LAST_COMMIT_MESSAGE" value="Many updates in INDECISION APP." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/indecision-app/public/scripts/app.js">
@@ -246,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/indecision-app/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="443">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
