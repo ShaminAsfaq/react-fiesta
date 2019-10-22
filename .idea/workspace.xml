@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c0f6d014-1ad9-44bc-88a4-8741aafc0645" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indecision-app/public/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/indecision-app/public/scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indecision-app/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/indecision-app/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indecision-app/src/playground/counter-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/indecision-app/src/playground/counter-example.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +15,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="678" />
   </component>
   <component name="ProjectId" id="1SKXS3Jfl7FLHBZ3FWmUwtkA0KD" />
   <component name="PropertiesComponent">
@@ -60,7 +57,7 @@
       <workItem from="1571313257600" duration="694000" />
       <workItem from="1571381219207" duration="737000" />
       <workItem from="1571508883158" duration="869000" />
-      <workItem from="1571724301056" duration="1085000" />
+      <workItem from="1571724301056" duration="10959000" />
     </task>
     <task id="LOCAL-00001" summary="Commit from WebStorm">
       <created>1571313329238</created>
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571508956564</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Office commit.">
+      <created>1571725488845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571725488845</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +147,7 @@
     <MESSAGE value="Finished 'Lecture 3' of Andrew Mead's Course." />
     <MESSAGE value="Merge branch 'master' of https://github.com/ShaminAsfaq/react-fiesta&#10;&#10;# Conflicts:&#10;#&#9;Time Logger/button-for-kazi-frontend/src/actions/index.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/Button.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/Duration.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/components/LoggedOut.js&#10;#&#9;Time Logger/button-for-kazi-frontend/src/reducers/index.js" />
     <MESSAGE value="Weekend vibes :3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weekend vibes :3" />
+    <MESSAGE value="Office commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Office commit." />
   </component>
 </project>
