@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0f6d014-1ad9-44bc-88a4-8741aafc0645" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/indecision-app/node_modules/normalize-path/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indecision-app/node_modules/normalize-path/package.json" beforeDir="false" />
-    </list>
+    <list default="true" id="c0f6d014-1ad9-44bc-88a4-8741aafc0645" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +58,7 @@
       <workItem from="1571508883158" duration="869000" />
       <workItem from="1571724301056" duration="11618000" />
       <workItem from="1571807409134" duration="78000" />
+      <workItem from="1571829284901" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="Commit from WebStorm">
       <created>1571313329238</created>
@@ -125,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571807454764</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished till 6x08.">
+      <created>1571829308859</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571829308860</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +173,7 @@
     <MESSAGE value="Office commit." />
     <MESSAGE value="Finished 5x07 with &quot;localStorage&quot; usage." />
     <MESSAGE value="Default and Named export covered." />
-    <option name="LAST_COMMIT_MESSAGE" value="Default and Named export covered." />
+    <MESSAGE value="Finished till 6x08." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished till 6x08." />
   </component>
 </project>
