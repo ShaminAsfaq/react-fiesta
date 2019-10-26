@@ -5,7 +5,12 @@ import Option from './Option';
 const Options = (props) => {
     return (
         <div>
-            <button onClick={props.deleteAll}>Remove All</button>
+            <button
+                className="button button--link"
+                onClick={props.deleteAll}
+            >
+                Remove All
+            </button>
             {
                 props.options.length === 0 && <p>Empty List!</p>
             }
