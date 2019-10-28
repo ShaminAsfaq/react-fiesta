@@ -3,8 +3,10 @@ import React from 'react';
 // Stateless Functional Component
 const Option = (props) => {
     return (
-        <div>
-            {props.item}
+        <div className="option">
+            <p className="option__item">
+                {props.count}. {props.item}
+            </p>
             <button
                 className="button button--link"
                 onClick={(e) => {
@@ -21,3 +23,4 @@ export {
     Option as default
 };
 
+ 
