@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server --host 0.0.0.0 --port 3000"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
