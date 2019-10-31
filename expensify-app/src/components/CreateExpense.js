@@ -1,9 +1,11 @@
 import React from 'react';
+import ExpenseForm from './ExpenseForm';
 
 const CreateExpense = () => {
     return (
         <div>
-            Create Something
+            <h1>Create Expense</h1>
+            <ExpenseForm/>
         </div>
     );
 }
@@ -11,3 +13,6 @@ const CreateExpense = () => {
 export {
     CreateExpense as default
 }
+
+
+
