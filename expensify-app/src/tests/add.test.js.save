@@ -1,0 +1,20 @@
+const add = (a, b) => a + b;
+const generate = (name) => {`Hello, ${name}!`};
+
+test('Should add two numbers', () => {
+	const result = add(3, 4);
+if(result!==7) {
+		throw new Error(`You can't even add two numbers, can you?`);
+	}
+
+	expect(result).toBe(7);
+
+});
+
+
+test('Should greet.', () => {
+	const greeting = generate('Mike');
+
+	
+
+});
