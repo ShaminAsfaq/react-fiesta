@@ -1,25 +1,8 @@
 import selectExpenses from '../../selectors/expenses'
 import moment from 'moment'
+import expenses from '../fixtures/expenses';
 
-const data = [{
-    id: '1',
-    description: 'Flair',
-    note: '',
-    amount: 50,
-    createdAt: 0
-}, {
-    id: '2',
-    description: 'Glamour',
-    note: '',
-    amount: 99,
-    createdAt: moment(0).subtract(4, 'days').valueOf()
-}, {
-    id: '3',
-    description: 'Fame',
-    note: '',
-    amount: 75,
-    createdAt: moment(0).add(4, 'days').valueOf()
-}]
+const data = expenses
 
 test('Testing SelectExpense', () => {
     const filters = {
@@ -89,6 +72,5 @@ test('Testing SortByAmount filter', () => {
         data[1], data[2], data[0]
     ])
 })
-
 
 
