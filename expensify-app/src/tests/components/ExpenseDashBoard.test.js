@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../../components/Header';
+import ExpenseDashBoard from '../../components/ExpenseDashBoard';
 import { shallow } from 'enzyme';
 
-test('Testing HeaderComponent', () => {
-    const wrapper = shallow(<Header />);
+test('Testing NotFoundComponent', () => {
+    const wrapper = shallow(<ExpenseDashBoard />);
     expect(wrapper).toMatchSnapshot();
 
     // const renderer = new ReactShallowRenderer();

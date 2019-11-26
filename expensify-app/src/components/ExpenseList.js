@@ -6,12 +6,17 @@ import selectExpenses from '../selectors/expenses';
 const ExpenseList = (props) => {
     return (
         <div>
-            <h1>Easy to IDENTIFY</h1>
-            {props.expenses.map((item) => {
-                return (
-                    <ExpenseListItem key={item.id} {...item}/>
-                );
-            })}
+            {
+                props.expenses.length === 0 ? (
+                    <p>Nothing to render</p>
+                ) : (
+                    props.expenses.map((item) => {
+                        return (
+                            <ExpenseListItem key={item.id} {...item}/>
+                        );
+                    })
+                )
+            }
         </div>
     );
 }
@@ -25,6 +30,7 @@ const mapStateToProps = (state) => {
 const ConnectedExpenseList = connect(mapStateToProps)(ExpenseList);
 
 export {
-    ConnectedExpenseList as default
+    ConnectedExpenseList as default,
+    ExpenseList
 }
 

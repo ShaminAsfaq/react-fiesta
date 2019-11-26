@@ -66,3 +66,4 @@ test('Testing EditExpense when ID is invalid', () => {
     const state = expensesReducer(expenses, action)
     expect(state).toEqual(expenses)
 })
+

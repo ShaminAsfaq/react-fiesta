@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ExpenseList Component with expenses 1`] = `
+<div>
+  <ExpenseListItem
+    amount={50}
+    createdAt={0}
+    description="Flair"
+    id="1"
+    key="1"
+    note=""
+  />
+  <ExpenseListItem
+    amount={99}
+    createdAt={-345600000}
+    description="Glamour"
+    id="2"
+    key="2"
+    note=""
+  />
+  <ExpenseListItem
+    amount={75}
+    createdAt={345600000}
+    description="Fame"
+    id="3"
+    key="3"
+    note=""
+  />
+</div>
+`;
+
+exports[`Testing ExpenseList Component without expenses 1`] = `
+<div>
+  <p>
+    Nothing to render
+  </p>
+</div>
+`;

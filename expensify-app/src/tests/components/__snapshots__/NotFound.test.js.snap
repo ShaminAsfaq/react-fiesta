@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing NotFoundComponent 1`] = `
+<div>
+  You are in the 404! - 
+  <Link
+    replace={false}
+    to="/"
+  >
+    Go Home!
+  </Link>
+</div>
+`;
