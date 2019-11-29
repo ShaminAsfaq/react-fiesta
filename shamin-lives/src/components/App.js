@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import Clock from './Clock';
 
+import Clock from './Clock';
 import Chronicle from './Chronicle';
 import Home from './Home';
+import NotFound from './404';
 
 const Menu = () => {
     return(
@@ -11,7 +12,7 @@ const Menu = () => {
             <NavLink to="/" exact={true} className="item">
                 Home
             </NavLink>
-            <NavLink to="/new" className="item">
+            <NavLink to="/create" className="item">
                 Create
             </NavLink>
             <div className="right menu">
@@ -31,7 +32,7 @@ const App = () => {
                 <Switch>
                     <Route path='/' component={Home} exact={true}/>
                     <Route path='/create' component={Chronicle}/>
-                    <Route component={() => (<div>404 - <Link to="/">Go Home</Link></div>)}/>
+                    <Route component={NotFound}/>
                 </Switch>
              </div>
         </BrowserRouter>
