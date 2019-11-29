@@ -30,7 +30,7 @@ const App = () => {
                 <Menu />
                 <Switch>
                     <Route path='/' component={Home} exact={true}/>
-                    <Route path='/new' component={Chronicle}/>
+                    <Route path='/create' component={Chronicle}/>
                     <Route component={() => (<div>404 - <Link to="/">Go Home</Link></div>)}/>
                 </Switch>
              </div>
