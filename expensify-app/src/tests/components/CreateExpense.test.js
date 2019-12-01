@@ -3,11 +3,11 @@ import { shallow } from 'enzyme';
 import { CreateExpense } from '../../components/CreateExpense';
 import expenses from '../fixtures/expenses';
 
-let onSubmitSpy, historySpy, wrapper;
+let createExpenseSpy, historySpy, wrapper;
 beforeEach(() => {
-    onSubmitSpy = jest.fn();
+    createExpenseSpy = jest.fn();
     historySpy = { push: jest.fn() };
-    wrapper = shallow(<CreateExpense onSubmit={onSubmitSpy} history={historySpy} />);
+    wrapper = shallow(<CreateExpense createExpense={createExpenseSpy} history={historySpy} />);
 });
 
 test('Testing CreateExpense', () => {
@@ -17,5 +17,5 @@ test('Testing CreateExpense', () => {
 test('Testing OnSubmit', () => {
     wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
     expect(historySpy.push).toHaveBeenLastCalledWith('/');
-    expect(onSubmitSpy).toHaveBeenLastCalledWith(expenses[1]);
+    expect(createExpenseSpy).toHaveBeenLastCalledWith(expenses[1]);
 })
