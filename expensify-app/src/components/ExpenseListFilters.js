@@ -10,11 +10,7 @@ class ExpenseListFilters extends React.Component {
     }
 
     onTextChange = (e) => {
-        if (e.target.value==='date') {
-            this.props.sortByDate();
-        } else if (e.target.value==='amount') {
-            this.props.sortByAmount();
-        }
+        this.props.setTextFilter(e.target);
     };
     onSortChange = (e) => {
         if (e.target.value==='date') {
