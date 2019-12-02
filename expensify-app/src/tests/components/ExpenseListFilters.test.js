@@ -65,7 +65,7 @@ test('Testing SortByAmount', () => {
 })
 
 /**
- * The TWO tests above isn't working :(
+ * The TWO tests above aren't working :(
  */
 
 test('Testing DateChange', () => {
