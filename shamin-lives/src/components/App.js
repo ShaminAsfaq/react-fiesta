@@ -5,6 +5,7 @@ import Clock from './Clock';
 import Chronicle from './Chronicle';
 import Home from './Home';
 import NotFound from './404';
+import Spotify from './Spotify';
 
 const Menu = () => {
     return(
@@ -34,6 +35,7 @@ const App = () => {
                     <Route path='/create' component={Chronicle}/>
                     <Route component={NotFound}/>
                 </Switch>
+                <Spotify />
              </div>
         </BrowserRouter>
     );
