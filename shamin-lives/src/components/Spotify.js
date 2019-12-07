@@ -8,35 +8,35 @@ import axios from 'axios';
 
 // var express =  require('express')
 
-import express from 'express';
+// import express from 'express';
 
 const Spotify = () => {
-    var app = express()
+    // var app = express()
     // Allow all in CORS
-    app.use(function(req, res, next) {
-        res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        next();
-    });
+    // app.use(function(req, res, next) {
+    //     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //     next();
+    // });
 
-    const getSpotifyStatus = async () => {
-        const songChangedURL = 'https://api.spotify.com/v1/me/player/currently-playing';
-        const authorizationToken = 'BQCrKSCy2qi_Ue17ywCQtzlVvpks1SqMuqQLsWjeBWkYU6eI_y_3ThfaybEx91oagJjCyiiWZxu0skYhvRalXBQD1S6gXRKQIQv18qdITwBjTX7YDv3fkpGPgMtFSjk7MH_StRNDCJuoPMYIm3Tx26shBUQHHnUB7gMKg4g';
+    // const getSpotifyStatus = async () => {
+    //     const songChangedURL = 'https://api.spotify.com/v1/me/player/currently-playing';
+    //     const authorizationToken = 'BQCrKSCy2qi_Ue17ywCQtzlVvpks1SqMuqQLsWjeBWkYU6eI_y_3ThfaybEx91oagJjCyiiWZxu0skYhvRalXBQD1S6gXRKQIQv18qdITwBjTX7YDv3fkpGPgMtFSjk7MH_StRNDCJuoPMYIm3Tx26shBUQHHnUB7gMKg4g';
     
-        const clientId = 'e049336609c1483e93b27a63bdefa50b';
-        const responseType = 'code';
-        const redirectUrl = '';
-        const authorizeUrl = 'GET https://accounts.spotify.com/authorize'
+    //     const clientId = 'e049336609c1483e93b27a63bdefa50b';
+    //     const responseType = 'code';
+    //     const redirectUrl = '';
+    //     const authorizeUrl = 'GET https://accounts.spotify.com/authorize'
 
-        //var response = await axios.get(songChangedURL, { headers: {"Authorization" : `Bearer ${authorizationToken}`} });
-        var response = await axios.get(songChangedURL, { headers: {"client_id" : `${authorizationToken}`, "response_type": `${responseType}`, "redirect_uri": `${{redirectUrl}}`} });
+    //     //var response = await axios.get(songChangedURL, { headers: {"Authorization" : `Bearer ${authorizationToken}`} });
+    //     var response = await axios.get(songChangedURL, { headers: {"client_id" : `${authorizationToken}`, "response_type": `${responseType}`, "redirect_uri": `${{redirectUrl}}`} });
 
         
 
-        console.log(await response);
-    }
+    //     console.log(await response);
+    // }
 
-    getSpotifyStatus();
+    // getSpotifyStatus();
 
     return (
         <div className="ui card" style={{
