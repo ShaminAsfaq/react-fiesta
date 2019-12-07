@@ -19,24 +19,24 @@ const Spotify = () => {
     //     next();
     // });
 
-    // const getSpotifyStatus = async () => {
-    //     const songChangedURL = 'https://api.spotify.com/v1/me/player/currently-playing';
-    //     const authorizationToken = 'BQCrKSCy2qi_Ue17ywCQtzlVvpks1SqMuqQLsWjeBWkYU6eI_y_3ThfaybEx91oagJjCyiiWZxu0skYhvRalXBQD1S6gXRKQIQv18qdITwBjTX7YDv3fkpGPgMtFSjk7MH_StRNDCJuoPMYIm3Tx26shBUQHHnUB7gMKg4g';
+    const getSpotifyStatus = async () => {
+        const songChangedURL = 'https://api.spotify.com/v1/me/player/currently-playing';
+        const authorizationToken = 'BQCrzYrZ1pEnQKS_M28cJ9m2bnWx1z-fVNTvyYZUCGR1rvBQ4PLLpCXIK0EN8T2ELt4kTPBzclT-2NzPTikV17vgs06M_x3RFXvGtrDZkm_lkwmJ_zCEl9Tjwmh0nmIFTdu72rC2IcQc6bm0CAaHS7iWsn1agh2mD1Zcj0M';
     
-    //     const clientId = 'e049336609c1483e93b27a63bdefa50b';
-    //     const responseType = 'code';
-    //     const redirectUrl = '';
-    //     const authorizeUrl = 'GET https://accounts.spotify.com/authorize'
+        const clientId = 'e049336609c1483e93b27a63bdefa50b';
+        const responseType = 'code';
+        const redirectUrl = '';
+        const authorizeUrl = 'GET https://accounts.spotify.com/authorize'
 
-    //     //var response = await axios.get(songChangedURL, { headers: {"Authorization" : `Bearer ${authorizationToken}`} });
-    //     var response = await axios.get(songChangedURL, { headers: {"client_id" : `${authorizationToken}`, "response_type": `${responseType}`, "redirect_uri": `${{redirectUrl}}`} });
+        var response = await axios.get(songChangedURL, { headers: {"Authorization" : `Bearer ${authorizationToken}`} });
+        // var response = await axios.get(songChangedURL, { headers: {"client_id" : `${authorizationToken}`, "response_type": `${responseType}`, "redirect_uri": `${{redirectUrl}}`} });
 
         
 
-    //     console.log(await response);
-    // }
+        console.log(await response);
+    }
 
-    // getSpotifyStatus();
+    getSpotifyStatus();
 
     return (
         <div className="ui card" style={{
