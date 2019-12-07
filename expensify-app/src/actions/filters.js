@@ -33,7 +33,6 @@ const setEndDate = (endDate) => {
     }
 }
 
-
 export {
     setTextFilter,
     sortByAmount,

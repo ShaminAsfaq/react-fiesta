@@ -6,7 +6,7 @@ import { addExpense } from '../actions/expenses';
 class CreateExpense extends React.Component {
     onSubmit = (expense) => {
         // props.dispatch(addExpense(expense))
-        this.props.onSubmit(expense)
+        this.props.createExpense(expense)
         this.props.history.push('/')
     };
 
@@ -24,7 +24,7 @@ class CreateExpense extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSubmit: (expense) => {
+        createExpense: (expense) => {
             return (
                 dispatch(addExpense(expense))
             );
