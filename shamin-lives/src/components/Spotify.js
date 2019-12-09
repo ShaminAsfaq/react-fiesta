@@ -2,63 +2,66 @@
  * Complete Proto-Type. Need more time. Nothing is fixed here.
  * I want to show the currently playing song on my Spotify to the viewers of the Blog.
  */
-
 import React from 'react';
 import axios from 'axios';
 
-// var express =  require('express')
-
-// import express from 'express';
-
-const Spotify = () => {
-    // var app = express()
-    // Allow all in CORS
-    // app.use(function(req, res, next) {
-    //     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-    //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    //     next();
-    // });
-
-    const getSpotifyStatus = async () => {
-        const songChangedURL = 'https://api.spotify.com/v1/me/player/currently-playing';
-        const authorizationToken = 'BQCrzYrZ1pEnQKS_M28cJ9m2bnWx1z-fVNTvyYZUCGR1rvBQ4PLLpCXIK0EN8T2ELt4kTPBzclT-2NzPTikV17vgs06M_x3RFXvGtrDZkm_lkwmJ_zCEl9Tjwmh0nmIFTdu72rC2IcQc6bm0CAaHS7iWsn1agh2mD1Zcj0M';
-    
-        const clientId = 'e049336609c1483e93b27a63bdefa50b';
-        const responseType = 'code';
-        const redirectUrl = '';
-        const authorizeUrl = 'GET https://accounts.spotify.com/authorize'
-
-        var response = await axios.get(songChangedURL, { headers: {"Authorization" : `Bearer ${authorizationToken}`} });
-        // var response = await axios.get(songChangedURL, { headers: {"client_id" : `${authorizationToken}`, "response_type": `${responseType}`, "redirect_uri": `${{redirectUrl}}`} });
-
-        
-
-        console.log(await response);
+class Spotify extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            response: undefined
+        }
+    }
+    componentDidMount() {
+        this.timerID = setInterval(() => {
+            axios({
+                method: 'GET',
+                url: 'http://118.179.95.206:5000/get_current_song'
+            }).then((response) => {
+                console.log(response)
+                if(response.data === "") {
+                    response = undefined
+                }
+                this.setState(() => {
+                    return {
+                        response
+                    }
+                });
+            });
+        }, 1000)
     }
 
-    getSpotifyStatus();
-
-    return (
-        <div className="ui card" style={{
-                position: 'fixed',
-                bottom: '2rem',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                marginLeft: '2rem'
-            }}>
-            <div className="content">
-                <div className="center aligned header">Song Name</div>
-                <div className="center aligned description">
-                    <p>This will contain the currently playing Spotify Song</p>
-                </div>
+    render() {
+        return (
+            <div>
+                {
+                    this.state.response ?
+                    <div className="ui card" style={{
+                            position: 'fixed',
+                            bottom: '2rem',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            marginLeft: '2rem'
+                    }}>
+                        <div className="content" style={{ backgroundColor: '#e2e7ea' }}>
+                            <div className="center aligned header" style={{ fontSize: '13px' }}>
+                                { this.state.response.data.item.name }
+                            </div>
+                            <div className="center aligned description" style={{ fontSize: '11px' }}>
+                                <p>{ this.state.response.data.item.artists[0].name }</p>
+                            </div>
+                        </div>
+                        <div className="extra content" style={{ backgroundColor: '#e2e7ea' }}>
+                            <div className="center aligned author">
+                                Now playing on Spotify
+                                <i className="spotify icon"></i>
+                            </div>
+                        </div>
+                    </div> : <div/>
+                }
             </div>
-            <div className="extra content">
-                <div className="center aligned author">
-                    <img className="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg"/> Jenny
-                </div>
-            </div>
-      </div>
-    )
+        )
+    }
 }
 
 export {
