@@ -51,9 +51,9 @@ class Spotify extends React.Component {
                                 <p>{ this.state.response.data.item.artists[0].name }</p>
                             </div>
                         </div>
-                        <div className="extra content" style={{ backgroundColor: '#e2e7ea' }}>
+                        <div className="extra content" style={{ backgroundColor: '#c6cfd6' }}>
                             <div className="center aligned author">
-                                Now playing on Spotify
+                                Now playing on Spotify&nbsp;
                                 <i className="spotify icon"></i>
                             </div>
                         </div>
