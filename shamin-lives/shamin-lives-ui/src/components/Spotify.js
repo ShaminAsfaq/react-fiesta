@@ -38,10 +38,10 @@ class Spotify extends React.Component {
                     this.state.response ?
                     <div className="ui card" style={{
                             position: 'fixed',
-                            bottom: '2rem',
+                            bottom: '1.5rem',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            marginLeft: '2rem'
+                            marginLeft: '74rem'
                     }}>
                         <div className="content" style={{ backgroundColor: '#e2e7ea' }}>
                             <div className="center aligned header" style={{ fontSize: '13px' }}>
