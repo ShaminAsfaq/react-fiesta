@@ -41,7 +41,7 @@ class Spotify extends React.Component {
                             bottom: '1.5rem',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            marginLeft: '74rem'
+                            marginLeft: '2rem'
                     }}>
                         <div className="content" style={{ backgroundColor: '#e2e7ea' }}>
                             <div className="center aligned header" style={{ fontSize: '13px' }}>
