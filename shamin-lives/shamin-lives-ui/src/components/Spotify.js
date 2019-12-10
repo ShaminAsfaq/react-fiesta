@@ -16,7 +16,7 @@ class Spotify extends React.Component {
         this.timerID = setInterval(() => {
             axios({
                 method: 'GET',
-                url: 'http://118.179.95.206:5000/get_current_song'
+                url: 'http://localhost:5000/get_current_song'
             }).then((response) => {
                 console.log(response)
                 if(response.data === "") {
@@ -35,7 +35,12 @@ class Spotify extends React.Component {
         return (
             <div>
                 {
-                    this.state.response ?
+                    this.state.response &&
+                    this.state.response.data &&
+                    this.state.response.data.item &&
+                    this.state.response.data.item.name &&
+                    this.state.response.data.item.artists[0] &&
+                    this.state.response.data.item.artists[0].name ?
                     <div className="ui card" style={{
                             position: 'fixed',
                             bottom: '1.5rem',

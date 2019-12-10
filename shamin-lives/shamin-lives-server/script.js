@@ -23,7 +23,8 @@ const authorizationCode = 'AQBlvIZGvQR5Ym07snQbiD9unPMTvRK9eJycSbQ6WTTfloIgmSatW
 
 const clientSecret = 'd404a71ddc77478ab89a65b4a9baa88a';
 const clientId = 'e049336609c1483e93b27a63bdefa50b';    
-const redirectUri = 'http://118.179.95.206:5000';
+const redirectUri = 'http://localhost:5000';
+const baseUri = 'http://localhost';
 const base64 = Buffer.from(clientId + ':' + clientSecret).toString('base64');
 const refreshToken = 'AQDxtez-8t6CovknnW-XbqG-Oa3H27KMRuHnWIGnsYiysXVK8NGPB4QyA6SezBcODIPnUqXEPcmoX54TChj7w7_0sPPaoIezmZR8hQFTDZBSv-2Sjl6lOZ1YUcekhHSF7cs';
 
@@ -90,7 +91,7 @@ app.get('/get_current_song', async (req, res) => {
     } else {
         bearerToken = await axios({
             method: 'GET',
-            url: 'http://118.179.95.206:5000/create_new_access_token'
+            url: 'http://localhost:5000/create_new_access_token'
         })
         spotifyApi.setAccessToken(bearerToken)
     }
@@ -109,7 +110,7 @@ app.get('/get_current_song', async (req, res) => {
     }).catch((err) => {
         bearerToken = axios({
             method: 'GET',
-            url: 'http://118.179.95.206:5000/create_new_access_token'
+            url: 'http://localhost:5000/create_new_access_token'
         }).then(() => {
             spotifyApi.setAccessToken(bearerToken)
         })
@@ -191,7 +192,7 @@ app.get('/login', (req, res) => {
         const scopes = [
             'user-read-currently-playing'
         ];
-        const redirectUri = 'http://118.179.95.206:5000';
+        const redirectUri = 'http://localhost:5000';
 
         res.redirect('https://accounts.spotify.com/authorize' +
         '?response_type=code' +
