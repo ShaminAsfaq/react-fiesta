@@ -19,7 +19,7 @@ class Spotify extends React.Component {
         this.timerID = setInterval(() => {
             axios({
                 method: 'GET',
-                url: 'http://172.17.0.69:5000/get_current_song'
+                url: 'http://118.179.95.206:5000/get_current_song'
             }).then(async (response) => {
                 // console.log(response)
                 // console.log(this.state.response.data.item.album.images)
