@@ -1,9 +1,6 @@
-//  Another MASSACRE
-
-
 /**
- * Complete Proto-Type. Need more time. Nothing is fixed here.
- * I want to show the currently playing song on my Spotify to the viewers of the Blog.
+ * A component to display the song I am listening to on Spotify.
+ * Hobby concept.
  */
 var axios = require('axios')
 var express =  require('express')
@@ -26,6 +23,10 @@ const clientId = 'e049336609c1483e93b27a63bdefa50b';
 const redirectUri = 'http://localhost:5000';
 const baseUri = 'http://localhost';
 const base64 = Buffer.from(clientId + ':' + clientSecret).toString('base64');
+
+/**
+ * REFRESH TOKENs have unlimited life time. Hence, once a singel refresh token is generated, it can be stored to get new ACCESS TOKENs whenever needed.
+ */
 const refreshToken = 'AQDxtez-8t6CovknnW-XbqG-Oa3H27KMRuHnWIGnsYiysXVK8NGPB4QyA6SezBcODIPnUqXEPcmoX54TChj7w7_0sPPaoIezmZR8hQFTDZBSv-2Sjl6lOZ1YUcekhHSF7cs';
 
 
@@ -108,19 +109,22 @@ app.get('/get_current_song', async (req, res) => {
         currentSong = green.data;
         res.send(green.data)
     }).catch((err) => {
+        spotifyApi.resetAccessToken();
         bearerToken = axios({
             method: 'GET',
             url: 'http://localhost:5000/create_new_access_token'
-        }).then(() => {
-            spotifyApi.setAccessToken(bearerToken)
+        }).then((value) => {
+            console.log(`Found Access Token: ${value}`)
+            spotifyApi.setAccessToken(value)
+            res.send(spotifyApi.getAccessToken())
+        }).catch(() => {
+            console.log('Error getting current song.')
+            res.send(currentSong)
         })
-        console.log('Error getting current song.')
-        res.send(currentSong)
     })
 })
 
 app.get('/create_new_access_token', async (req, res) => {
-
     if(spotifyApi.getAccessToken()) {
         res.send(spotifyApi.getAccessToken());
     } else {
