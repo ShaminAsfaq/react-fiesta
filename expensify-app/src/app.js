@@ -13,9 +13,9 @@ import './firebase/firebase';
 
 const foundStore = configureStore();
 
-foundStore.dispatch(addExpense({ description: 'Water Bill', amount: 4500 }));
-foundStore.dispatch(addExpense({ description: 'Gas Bill', createdAt: 1000 }));
-foundStore.dispatch(addExpense({ description: 'Rent', amount: 109500 }));
+// foundStore.dispatch(addExpense({ description: 'Water Bill', amount: 4500 }));
+// foundStore.dispatch(addExpense({ description: 'Gas Bill', createdAt: 1000 }));
+// foundStore.dispatch(addExpense({ description: 'Rent', amount: 109500 }));
 
 const state = foundStore.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);

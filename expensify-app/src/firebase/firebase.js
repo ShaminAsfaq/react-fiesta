@@ -12,19 +12,44 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig)
+
 const database = firebase.database()
+
+export {
+    firebase,
+    database as default
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // database.ref('expenses').on('value', (snapshot) => {
 //     console.log(snapshot.val())
 // })
 
-database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
-database.ref('expenses').on('child_changed',(snapshot) => {
-    console.log(snapshot.key, 'changed')
-})
+// database.ref('expenses').on('child_changed',(snapshot) => {
+//     console.log(snapshot.key, 'changed')
+// })
 
 // database.ref('expenses').once('value').then((snapshot) => {
 //     const expenses = [];
